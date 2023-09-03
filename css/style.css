@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream-color: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --dark-gray: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Fraunces', serif;
+  background-color: var(--cream-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border-radius: 10px;
+  display: flex;
+  max-width: 666px;
+  background-color: var(--white);
+  margin: 0 1rem;
+}
+
+.img_container {
+  width: 50%;
+}
+
+.img_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.details_container {
+  padding: 2rem;
+  width: 50%;
+}
+
+.details_container .montserrat {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 1.75rem;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+}
+
+.details_container .name {
+  color: var(--dark-blue);
+  padding-right: 2rem;
+  margin-bottom: 1.75rem;
+}
+
+
+.details_container .description {
+  color: var(--dark-gray);
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 1.75rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.price_container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.price_container .current_price {
+  color: var(--dark-cyan);
+}
+
+.price_container .old_price {
+  font-family: 'Montserrat',
+    sans-serif;
+  color: var(--dark-gray);
+  text-decoration: line-through;
+}
+
+.details_container .btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Montserrat',
+    sans-serif;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.details_container .btn:hover {
+  background-color: var(--dark-blue);
+}
+
+
+@media only screen and (max-width:550px) {
+  .card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+  }
+
+  .img_container {
+    width: 100%;
+    height: 40%;
+  }
+
+  .img_container img {
+    content: url(../images/image-product-mobile.jpg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .details_container {
+    width: 100%;
+  }
+
+  .details_container .name {
+    padding-right: 0;
+  }
+}
